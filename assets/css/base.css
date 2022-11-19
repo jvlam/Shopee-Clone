@@ -1,0 +1,96 @@
+:root {
+    --primary-color: #ed4c2b;
+    --primary-color-rgba: rgba(237, 76, 43, 1);
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+
+    --navbar-height: 36px;
+    --header-height: 126px;
+    --header-search-height: calc(var(--header-height) - var(--navbar-height) - 10px);
+}
+
+* {
+    box-sizing: inherit;    
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+html {
+    /* tương đương với 1rem = 10px */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+@keyframes growth {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.btn {
+    min-width: 129px;
+    height: 35px;
+    border-radius: 2px;
+    color: var(--white-color);
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+    background-color: var(--white-color);
+}
+
+.btn.btn--active {
+    background-color: var(--primary-color);
+}
+
+.btn.btn--size-s {
+    min-width: 96px;
+}
+
+/* pagination */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 47px;
+    padding-left: 0;
+    font-weight: 400;
+    margin-bottom: 64px;
+}
+
+.pagination__number {
+    list-style-type: none;
+}
+
+.pagination__number-link {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #9393a0;
+    display: block;
+    margin: 0 30px;
+}
+
+
+.pagination__number-link--active {
+    width: 43px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 2px; 
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
